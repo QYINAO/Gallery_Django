@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url,include
-from gallery.views import LoginView
+from gallery.views import LoginView,RegisterView
 
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'^login$', LoginView.as_view(), name='login'),    # 登录
+    url(r'^register$',RegisterView.as_view(),name='register'),   # 注册
 ]
